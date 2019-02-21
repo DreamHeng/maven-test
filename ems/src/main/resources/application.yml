@@ -1,0 +1,21 @@
+server:
+  port: 8888
+  context-path: /ems
+  jsp-servlet:
+    init-parameters:
+      development: true
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bjtest
+    username: root
+    password: toor
+    type: com.alibaba.druid.pool.DruidDataSource
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+mybatis-plus:
+  mapper-locations: classpath:mapper/*Dao.xml
+
